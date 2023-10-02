@@ -67,6 +67,31 @@ def match_case_demo():
             print('Not match')
 
 
+def exception_demo():
+    # while True:
+    #     try:
+    #         x = int(input("Please enter a number: "))
+    #         break
+    #     except ValueError:
+    #         print("Oops!  That was no valid number.  Try again...")
+
+    # raise Exception('spam', 'eggs')
+
+    # try:
+    #     raise NameError('HiThere')
+    # except NameError as e:
+    #     print('An exception flew by!')
+    #     raise RuntimeError('runtime error') from e
+
+    try:
+        raise KeyboardInterrupt
+    finally:
+        print('Goodbye, world!')
+
+
 if __name__ == '__main__':
     print("main")
-    fluent()
+    # fluent()
+    # match_case_demo()
+    exception_demo()
+    print("done")

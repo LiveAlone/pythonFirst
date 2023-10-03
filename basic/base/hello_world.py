@@ -3,8 +3,11 @@
 
 __author__ = 'yaoqijun'
 __mail__ = 'yaoqijunmail@foxmail.com'
-__name__ = 'model'
 
 '''
 description: 
 '''
+
+if __name__ == '__main__':
+    name = input("input your name:")
+    print("hello world, %s" % name)

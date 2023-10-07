@@ -4,6 +4,8 @@
 __author__ = 'yaoqijun'
 __mail__ = 'yaoqijunmail@foxmail.com'
 
+from typing import Iterable
+
 '''
 description: 
 '''
@@ -29,19 +31,27 @@ def animal_run(animal):
 
 
 def test_animal():
+    # # 1. 定义抽象接口
     # animal_run(Animal())
     # animal_run(Dog())
     # animal_run(Cat())
 
-    # 1. 类型判断
+    # # 2. 类型判断
     # print(isinstance(Animal(), Animal))
 
+    # 3. 对象属性获取方式
     dog = Dog()
-    # print(dir(dog))
-    # print(dog.__class__)
-    # print(dog.__class__.__name__)
-    # print(hasattr(dog, 'run'))
+    print(dir(dog))
+    print(dog.__class__)
+    print(dog.__class__.__name__)
+    # 获取函数属性
+    print(hasattr(dog, 'run'))
     getattr(dog, 'run')()
+
+    print(type(123))
+    print(type('123'))
+    print(isinstance('123', Iterable))
+    print(type(dog))
 
 
 def add_method():
@@ -57,5 +67,5 @@ def add_method():
 
 
 if __name__ == '__main__':
-    # test_animal()
-    add_method()
+    test_animal()
+    # add_method()

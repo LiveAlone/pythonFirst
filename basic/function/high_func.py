@@ -11,7 +11,7 @@ description: 高阶函数使用
 
 def high_method_params():
 
-    # # 1. 变量可以指向函数
+    # # 1. 通过高阶函数，完成延迟计算，提高效率
     # def lazy_sum(*args):
     #     def sum():
     #         ax = 0

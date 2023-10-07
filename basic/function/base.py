@@ -9,46 +9,6 @@ description:
 '''
 
 
-def ask_ok(prompt, retries=4, reminder='Please try again!'):
-    while True:
-        ok = input(prompt)
-        if ok in ('y', 'ye', 'yes'):
-            return True
-        if ok in ('n', 'no', 'nop', 'nope'):
-            return False
-        retries = retries - 1
-        if retries < 0:
-            raise ValueError('invalid user response')
-        print(reminder)
-
-
-def param_outer():
-    # 1. 参数外部变量常量赋值
-    # i = 5
-    #
-    # def f(arg=i):
-    #     print(arg)
-    #
-    # i = 6
-    # f()
-
-    # 2. 可变参数列表
-    # def f(a, L=[]):
-    #     L.append(a)
-    #     return L
-
-    # def f(a, L=None):
-    #     if L is None:
-    #         L = []
-    #     L.append(a)
-    #     return L
-    #
-    # print(f(1))
-    # print(f(2))
-    # print(f(3))
-    pass
-
-
 def parrot(voltage, state='a stiff', action='voom', type='Norwegian Blue'):
     print("-- This parrot wouldn't", action, end=' ')
     print("if you put", voltage, "volts through it.")

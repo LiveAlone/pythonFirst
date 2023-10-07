@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-__author__ = 'yaoqijun'
+__author__ = 'qjyao'
 __mail__ = 'yaoqijunmail@foxmail.com'
 
 '''
-description: class 类型定义
+description:
 '''
 
 
@@ -30,36 +30,42 @@ def scope_test():
     print("After global assignment:", spam)
 
 
-class MyClass:
-    """A simple example class"""
-    i = 12345
-
-    def __init__(self):
-        self.data = []
-
-    def f(self):
-        print(self)
-        return 'hello world'
-
-
 def reverse(data):
     for index in range(len(data)-1, -1, -1):
         yield data[index]
 
 
-def generate_express():
-    print(sum(i*i for i in range(10)))
+def param_outer():
+    # # 1. 参数外部变量常量赋值
+    # i = 5
+    #
+    # def f(arg=i):
+    #     print(arg)
+    #
+    # i = 6
+    # f()
+
+    # 2. 可变参数列表
+    # def f(a, L=[]):
+    #     L.append(a)
+    #     return L
+
+    def f(a, L=None):
+        if L is None:
+            L = []
+        L.append(a)
+        return L
+
+    print(f(1))
+    print(f(2))
+    print(f(3))
 
 
 if __name__ == '__main__':
     # scope_test()
 
-    # my = MyClass()
-    # xf = my.f
-    # for i in range(10):
-    #     xf()
+    # for e in reverse('yaoqijun'):
+    #     print(e)
 
-    # for char in reverse('golf'):
-    #     print(char)
+    param_outer()
 
-    generate_express()

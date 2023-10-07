@@ -10,11 +10,19 @@ description: 流程控制
 
 
 def if_demo():
-    age = int(input("input your age:"))
-    if age >= 18:
-        print('your age is old: ', age)
+    # 1. 循环判断方式
+    # age = int(input("input your age:"))
+    # if age >= 18:
+    #     print('your age is old: ', age)
+    # else:
+    #     print('your age is young: ', age)
+
+    # 2. py自动转换False 类型
+    v = []
+    if v:
+        print("Not None")
     else:
-        print('your age is young: ', age)
+        print("None")
 
 
 def loop_demo():
@@ -39,6 +47,6 @@ def match_case_demo():
 
 
 if __name__ == '__main__':
-    # if_demo()
+    if_demo()
     # loop_demo()
-    match_case_demo()
+    # match_case_demo()

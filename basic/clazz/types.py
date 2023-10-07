@@ -13,6 +13,8 @@ def types_demo():
     print(type(123))
     print(type('123'))
 
+    # print(isinstance('123', Iterable))
+
 
 if __name__ == '__main__':
     types_demo()

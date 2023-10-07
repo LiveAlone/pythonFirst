@@ -13,27 +13,24 @@ description: 集合类型
 
 
 def list_tuple_demo():
-    # 1. list 列表类型
+    # # 1. list 列表类型
     # classmates = ['Michael', 'Bob', 'Tracy']
-    # print(classmates[0], classmates[1], classmates[2])
+    # print(len(classmates), classmates[1])
 
-    # 2. tuple
+    # # 2. tuple
     # t2 = ('a', 'b', ['A', 'B'])
     # print(t2[2][0])
     # print(t2[2][1])
 
-    # print(isinstance('123', Iterable))
-
     # # 3. 迭代生成器
     # g = (x * x for x in range(10))
-    # # print(g)
-    # print(next(g))
+    # print(g)
     # print(next(g))
     # print(next(g))
 
-    # 4. list 自动化构建
+    # 4. 通过迭代器构建list, list函数和[] 方式
     # ls = list(map(lambda x: x**2, range(10)))
-    # ls = squares = [x ** 2 for x in range(10)]
+    # ls = [x ** 2 for x in range(10)]
     # ls = [(x, y) for x in [1, 2, 3] for y in [3, 1, 4] if x != y]
     # print(ls)
 
@@ -90,6 +87,6 @@ def collection_action():
 
 
 if __name__ == '__main__':
-    # list_tuple_demo()
+    list_tuple_demo()
     # dict_demo()
-    collection_action()
+    # collection_action()

@@ -48,10 +48,7 @@ def ham_eggs(ham: str, eggs: str = 'eggs') -> str:
 
 
 if __name__ == '__main__':
-    # ask_ok('Do you really want to quit? \n')
-    # param_outer()
-
-    # 3. 参数替换
+    # 1. 默认参数定义
     # parrot(1000)
     # parrot(voltage=1000)
     # parrot(voltage=1000000, action='VOOOOOM')
@@ -65,5 +62,8 @@ if __name__ == '__main__':
     #            client="John Cleese",
     #            sketch="Cheese Shop Sketch")
 
+    # 2. 参数支持lambda 表达式
     # lambda_demo()
+
+    # 3. 参数支持类型定义
     ham_eggs('spam')

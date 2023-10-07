@@ -5,7 +5,7 @@ __author__ = 'yaoqijun'
 __mail__ = 'yaoqijunmail@foxmail.com'
 
 '''
-description: 数据变量表达式
+description: 输出表达式格式化
 '''
 
 
@@ -31,17 +31,6 @@ def var_demo():
     print('%10d %%' % 3)
 
 
-def express_demo():
-    # 1. 判断表达式是否为空
-    # v = None
-    v = []
-    if v:
-        print('v is not None')
-    else:
-        print('v is None')
-
-
 if __name__ == '__main__':
-    # var_demo()
-    express_demo()
+    var_demo()
 

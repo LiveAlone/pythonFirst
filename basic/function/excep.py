@@ -5,7 +5,7 @@ __author__ = 'yaoqijun'
 __mail__ = 'yaoqijunmail@foxmail.com'
 
 '''
-description: 
+description:  异常处理方式
 '''
 
 

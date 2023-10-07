@@ -5,7 +5,7 @@ __author__ = 'yaoqijun'
 __mail__ = 'yaoqijunmail@foxmail.com'
 
 '''
-description: 内置函数方式, 可以通过 getitem 方式, 获取方式
+description: 内置函数
 '''
 
 

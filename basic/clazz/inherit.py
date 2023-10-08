@@ -4,6 +4,7 @@
 __author__ = 'yaoqijun'
 __mail__ = 'yaoqijunmail@foxmail.com'
 
+from abc import abstractclassmethod, abstractmethod
 from typing import Iterable
 
 '''
@@ -52,6 +53,21 @@ def test_animal():
     print(type('123'))
     print(isinstance('123', Iterable))
     print(type(dog))
+
+
+class Promotion(object):
+
+    @abstractmethod
+    def discount(self, order):
+        """
+        :param order: 计算对应的折扣金额
+        :return:
+        """
+
+
+class FidelityPromo(Promotion):
+    def discount(self, order):
+        return order.total() * 0.5 if order.customer.fidelity >= 1000 else 0
 
 
 def add_method():

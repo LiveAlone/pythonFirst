@@ -86,6 +86,42 @@ def func_annotation():
     now()
 
 
+def yield_con():
+
+    # # 1. 通过yield 输入数据
+    # def simple_routine():
+    #     print('routine start')
+    #     x = yield
+    #     print('x value is %s' % x)
+    #     print('routine end')
+    #
+    # my_cro = simple_routine()
+    # # print(my_cro)
+    # next(my_cro)
+    # my_cro.send('all x content') # stopIteration 捕获结束异常
+
+    # 2. next
+    def average():
+        total = 0.0
+        count = 0
+        average_value = None
+        while True:
+            term = yield average_value
+            total += term
+            count += 1
+            average_value = total / count
+
+    av = average()
+
+    print(next(av))
+    print(av.send(100))
+    print(av.send(120))
+    print(av.send(140))
+    print(av.send(160))
+    print(av.send(250))
+
+
 if __name__ == '__main__':
     # high_method_params()
-    func_annotation()
+    # func_annotation()
+    yield_con()

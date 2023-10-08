@@ -10,25 +10,23 @@ description:  异常处理方式
 
 
 def exception_demo():
-    # while True:
-    #     try:
-    #         x = int(input("Please enter a number: "))
-    #         break
-    #     except ValueError:
-    #         print("Oops!  That was no valid number.  Try again...")
 
-    # raise Exception('spam', 'eggs')
+    # 1. try - except - else - finally. 代码块处理关系。 定义else进行逻辑块封装
+    try:
+        print("none")
+        raise RuntimeError("err")
+    except RuntimeError as e:
+        print("runtime error", e)
+    else:
+        print("else not error")
+    finally:
+        print("finally no error")
 
     # try:
     #     raise NameError('HiThere')
     # except NameError as e:
     #     print('An exception flew by!')
     #     raise RuntimeError('runtime error') from e
-
-    try:
-        raise KeyboardInterrupt
-    finally:
-        print('Goodbye, world!')
 
 
 if __name__ == '__main__':

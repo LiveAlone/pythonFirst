@@ -18,15 +18,30 @@ def list_tuple_demo():
     # print(len(classmates), classmates[1])
 
     # # 2. tuple
-    # t2 = ('a', 'b', ['A', 'B'])
-    # print(t2[2][0])
-    # print(t2[2][1])
+    # t2 = ('a', 'b', ('A', 'B'))
+    # # print(t2[2][0])
+    # # print(hash(t2))
+    # print(t2)
+    # print(*t2)
 
     # # 3. 迭代生成器
     # g = (x * x for x in range(10))
     # print(g)
     # print(next(g))
     # print(next(g))
+
+    # # 3.1 iter 获取迭代过程
+    # s = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+    # # print(isinstance(s, Iterable))
+    # # for char in s:
+    # #     print(char)
+    # s_iter = iter(s)
+    # while True:
+    #     try:
+    #         print(next(s_iter))
+    #     except StopIteration:
+    #         print("finish")
+    #         break
 
     # 4. 通过迭代器构建list, list函数和[] 方式
     # ls = list(map(lambda x: x**2, range(10)))
@@ -42,13 +57,20 @@ def list_tuple_demo():
     # print(queue)
 
     # 6. demo matrix revert
-    matrix = [
-        [1, 2, 3, 4],
-        [5, 6, 7, 8],
-        [9, 10, 11, 12],
-    ]
-    matrix_rev = [[row[i] for row in matrix] for i in range(4)]
-    print(matrix_rev)
+    # matrix = [
+    #     [1, 2, 3, 4],
+    #     [5, 6, 7, 8],
+    #     [9, 10, 11, 12],
+    # ]
+    # matrix_rev = [[row[i] for row in matrix] for i in range(4)]
+    # print(matrix_rev)
+
+    # 7. 支持分配赋值操作
+    l = []
+    # # a, b, *l = range(1, 100)
+    # # a, b, *l = range(1, 3)
+    a, b, *l, d = range(1, 10)
+    print(a, b, l, d)
 
 
 def dict_demo():

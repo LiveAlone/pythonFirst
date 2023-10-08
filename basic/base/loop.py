@@ -26,9 +26,21 @@ def if_demo():
 
 
 def loop_demo():
-    names = ['Michael', 'Bob', 'Tracy']
-    for name in names:
-        print(name)
+    # names = ['Michael', 'Bob', 'Tracy']
+    # for name in names:
+    #     print(name)
+
+    # for - else 判断不存在时刻
+    def validate(my_list):
+        for item in my_list:
+            if item == 'banana':
+                print('i found banana content')
+                break
+        else:
+            raise ValueError('i not found banana exception')
+
+    l = ['apple', 'orange', 'grade', 'banana']
+    validate(l)
 
 
 def match_case_demo():
@@ -47,6 +59,6 @@ def match_case_demo():
 
 
 if __name__ == '__main__':
-    if_demo()
-    # loop_demo()
+    # if_demo()
+    loop_demo()
     # match_case_demo()

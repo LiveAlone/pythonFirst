@@ -4,6 +4,8 @@
 __author__ = 'yaoqijun'
 __mail__ = 'yaoqijunmail@foxmail.com'
 
+import functools
+
 '''
 description: 高阶函数使用
 '''
@@ -70,6 +72,7 @@ def func_annotation():
     # 2. 返回wrapper 支持参数
     def log(text):
         def decorator(func):
+            @functools.wraps(func)
             def wrapper(*args, **kw):
                 print('%s %s():' % (text, func.__name__))
                 return func(*args, **kw)
@@ -123,5 +126,5 @@ def yield_con():
 
 if __name__ == '__main__':
     # high_method_params()
-    # func_annotation()
-    yield_con()
+    func_annotation()
+    # yield_con()

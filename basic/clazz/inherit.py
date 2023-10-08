@@ -71,17 +71,23 @@ class FidelityPromo(Promotion):
 
 
 def add_method():
-    # 1. 自定义扩展方法
     def set_age(self, age):
         self.age = age
 
-    from types import MethodType
+    # 1. 实例对象定义方法
+    # from types import MethodType
+    # dog = Dog()
+    # dog.set_age = MethodType(set_age, dog)
+    # dog.set_age(2)
+    # print(dog.age)
+
+    # 2. 类级别定义方法
+    Dog.set_age = set_age
     dog = Dog()
-    dog.set_age = MethodType(set_age, dog)
     dog.set_age(2)
     print(dog.age)
 
 
 if __name__ == '__main__':
-    test_animal()
-    # add_method()
+    # test_animal()
+    add_method()

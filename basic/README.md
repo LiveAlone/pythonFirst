@@ -21,3 +21,8 @@ class 类集合定义方式
 ### io
 文件io 数据读写支持
 
+
+## third libs 三方类库支持
+
+1. ```chardet``` 用于检测文本内容字符编码格式。
+2. ```requests``` url 完成http请求，数据抓取过程

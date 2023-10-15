@@ -4,6 +4,8 @@
 __author__ = 'yaoqijun'
 __mail__ = 'yaoqijunmail@foxmail.com'
 
+from io import StringIO, BytesIO
+
 import math
 
 '''
@@ -42,11 +44,44 @@ def format_demo():
 
 
 def file_demo():
-    with open('demo.json', encoding="utf-8") as f:
+    # 1. 字符读取方式
+    # with open('demo.json', encoding="utf-8") as f:
+    #     # read_data = f.read()
+    #     # print(read_data)
+    #
+    #     for readline in f.readlines():
+    #         print(readline)
+
+    with open('demo.json', 'rb') as f:
         read_data = f.read()
         print(read_data)
 
 
+def string_byte_io():
+    # 1. 字符串读取方式
+    # f = StringIO()
+    # f.write('hello')
+    # f.write(' ')
+    # f.write('world!')
+    # print(f.getvalue())
+
+    # 2. 字节读取方式
+    f = BytesIO()
+    f.write('中文'.encode('utf-8'))
+    print(f.getvalue())
+
+
+def os_file_execute():
+    # 1. 文件操作
+    import os
+    # print(os.name, os.uname(), os.environ)
+    # print(os.path)
+    print(os.environ.get('PATH'))
+
+
 if __name__ == '__main__':
     # format_demo()
-    file_demo()
+    # file_demo()
+    # string_byte_io()
+    os_file_execute()
+

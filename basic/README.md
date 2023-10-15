@@ -18,6 +18,5 @@ class 类集合定义方式
 ## std_libs
 标准类型相关功能支持
 
-### io
-文件io 数据读写支持
-
+1. io。文件io 数据读写支持
+2. process_thread 进程和协程协调支持

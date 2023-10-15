@@ -4,6 +4,8 @@
 __author__ = 'yaoqijun'
 __mail__ = 'yaoqijunmail@foxmail.com'
 
+import logging
+
 '''
 description:  异常处理方式
 '''
@@ -16,7 +18,7 @@ def exception_demo():
         print("none")
         raise RuntimeError("err")
     except RuntimeError as e:
-        print("runtime error", e)
+        logging.exception(e)
     else:
         print("else not error")
     finally:

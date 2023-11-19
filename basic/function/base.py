@@ -47,6 +47,22 @@ def ham_eggs(ham: str, eggs: str = 'eggs') -> str:
     return ham + ' and ' + eggs
 
 
+def lib_func_demo():
+    # abs
+    # f = abs
+    # print(f(-10))
+    # print(abs.__name__)
+
+    # map filter
+    # for it in map(lambda x: x * x, [1, 2, 3, 4, 5, 6, 7, 8, 9]):
+    #     print(it)
+    #
+    # for it in filter(lambda x: x % 2 == 1, range(1, 20)):
+    #     print(it)
+
+    print(sorted([36, 5, -12, 9, -21], key=abs))
+
+
 if __name__ == '__main__':
     # 1. 默认参数定义
     # parrot(1000)
@@ -66,4 +82,7 @@ if __name__ == '__main__':
     # lambda_demo()
 
     # 3. 参数支持类型定义
-    ham_eggs('spam')
+    # ham_eggs('spam')
+
+    # 4. 官方函数执行
+    lib_func_demo()
